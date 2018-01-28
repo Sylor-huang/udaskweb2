@@ -18,8 +18,14 @@ default: &default
   socket: /tmp/mysql.sock
 
 development:
-  <<: *default
-  database: udaskweb2_development
+#  <<: *default
+#  database: udaskweb2_development
+  adapter: mysql2
+  encoding: utf8
+  database: udaskdata
+  username: root
+  password: root
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,6 +33,8 @@ development:
 test:
   <<: *default
   database: udaskweb2_test
+
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
