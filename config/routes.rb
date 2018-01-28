@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  get 'others_pages/about'
+
+  get 'others_pages/contact'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
+  get 'static_pages/about'
 
   resources :microposts
   resources :users
